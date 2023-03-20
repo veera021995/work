@@ -6,7 +6,7 @@ secret_key = "3gXv8/mkTpVgdXxoMvIrVuWPy3OPr+IW7W7D8OQF"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0d81306eddc614a45"
+  ami             = "ami-05afd67c4a44cc983"
   instance_type   = "t2.micro"
   key_name        = "veerabhadra"
   vpc_security_group_ids = [aws_security_group.three.id]
@@ -25,7 +25,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0d81306eddc614a45"
+  ami             = "ami-05afd67c4a44cc983"
   instance_type   = "t2.micro"
   key_name        = "veerabhadra"
   vpc_security_group_ids = [aws_security_group.three.id]
