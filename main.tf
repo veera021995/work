@@ -8,7 +8,7 @@ secret_key = "3gXv8/mkTpVgdXxoMvIrVuWPy3OPr+IW7W7D8OQF"
 resource "aws_instance" "one" {
   ami             = "ami-05afd67c4a44cc983"
   instance_type   = "t2.micro"
-  key_name        = "veera"
+  key_name        = "veera.pem"
   vpc_security_group_ids = [aws_security_group.three.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -27,7 +27,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-05afd67c4a44cc983"
   instance_type   = "t2.micro"
-  key_name        = "veera"
+  key_name        = "veera.pem"
   vpc_security_group_ids = [aws_security_group.three.id]
   availability_zone = "ap-south-1b"
   user_data       = <<EOF
